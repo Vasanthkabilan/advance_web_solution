@@ -34,13 +34,13 @@ include "sidenav.php";
                 <div class="col-md-14">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title"> CLients List</h4>
+                <h4 class="card-title"> Clients List</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                        <tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>Password</th>
+                        <tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Email</th>
                     </tr></thead>
                     <tbody>
                       <?php 
@@ -48,7 +48,7 @@ include "sidenav.php";
 
                         while(list($id,$firstname,$lastname,$email,$password_hash)=mysqli_fetch_array($result))
                         {	
-                        echo "<tr><td>$id</td><td>$firstname</td><td>$lastname</td><td>$email</td><td>$password_hash</td>
+                        echo "<tr><td>$id</td><td>$firstname</td><td>$lastname</td><td>$email</td>
 
                         </tr>";
                         }
@@ -167,7 +167,7 @@ include "sidenav.php";
 //include "footer.php";
 //?>
 
-<section class="right">
+<!-- <section class="right">
             <div class="investments">
                 <div class="header">
                     <h2>Clients List</h2>
@@ -204,4 +204,4 @@ include "sidenav.php";
                     <div class="amount">
                         <h4>$20,033</h4>
                         <small class="success">+12.57%</small>
-                    </div>
+                    </div> -->

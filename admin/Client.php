@@ -15,7 +15,6 @@ header("location: Client.php");
 mysqli_close($con);
 }
 
-
 ?>
       <!-- End Navbar -->
       <div class="content">
@@ -24,8 +23,7 @@ mysqli_close($con);
           <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Add Users</h4>
-                  <p class="card-category">Complete User profile</p>
+                  <h4 class="card-title">Add Client</h4>
                 </div>
                 <div class="card-body">
                   <form action="" method="post" name="form" enctype="multipart/form-data">
@@ -82,7 +80,7 @@ mysqli_close($con);
                       
                     </div> -->
                     
-                    <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Update User</button>
+                    <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Add</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -96,14 +94,14 @@ mysqli_close($con);
          <div class="col-md-14">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title">Manage User</h4>
+                <h4 class="card-title">Manage Client</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table tablesorter table-hover" id="">
                     <thead class=" text-primary">
-                      <tr><th>User Name</th>
-                <th>User Password</th>
+                      <tr><th>Email</th>
+              
 	<!-- <th><a href="adduser.php" class="btn btn-success">Add New</a></th> -->
                     </tr></thead>
                     <tbody>
@@ -113,7 +111,7 @@ mysqli_close($con);
                         while(list($user_id,$user_name,$user_password_hash)=
                         mysqli_fetch_array($result))
                         {
-                        echo "<tr><td>$user_name</td><td>$user_password_hash</td>";
+                        echo "<tr><td>$user_name</td>";
 
                         echo"<td>
                         <a href='edituser.php?user_id=$user_id' type='button' rel='tooltip' title='' class='btn btn-info btn-link btn-sm' data-original-title='Edit User'>

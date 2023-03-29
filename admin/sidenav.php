@@ -19,9 +19,9 @@
             <img src="./images/logo.png" class="logo">
          <div class="profile-area">
             <div class="profile">
-                <div class="profile-photo">
+                <!-- <div class="profile-photo">
                     <img src="./images/profile.jpg">
-                </div>
+                </div> -->
                 <h5>Vasanth Kabilan</h5>
                 <span class="material-symbols-sharp">expand_more</span>
             </div>
@@ -47,22 +47,26 @@
                     <span class="material-symbols-sharp">group</span>
                     <h4>Clients</h4>
                 </a>
-                <a href="./Wallet.html">
+                <a href="./invest.php">
+                    <span class="material-symbols-sharp">monitoring</span>
+                    <h4>Investments</h4>
+                </a>
+                <a href="./services.php">
+                    <span class="material-symbols-sharp">real_estate_agent</span>
+                    <h4>Services</h4>
+                </a>
+                <a href=".#">
                     <span class="material-symbols-sharp">support_agent</span>
                     <h4>RM</h4>
                 </a>
-                <a href="./Transactions.html">
+                <a href=".#">
                     <span class="material-symbols-sharp">tips_and_updates</span>
                     <h4>Idea Creator</h4>
                 </a>
-                <!-- <a href="./Analytics.html">
-                    <span class="material-symbols-sharp">article</span>
-                    <h4>Investment Report</h4>
-                </a>
-                <a href="./Settings.html">
+                <!-- <a href="./Settings.html">
                     <span class="material-symbols-sharp">settings</span>
                     <h4>Settings</h4>
-                </a> -->
+                </a>  -->
             </div>
 
         </aside>
