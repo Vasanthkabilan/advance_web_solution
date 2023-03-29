@@ -7,9 +7,8 @@ if(isset($_POST['btn_save']))
 $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
 $email=$_POST['email'];
-$password_hash=$_POST['password_hash'];
 
-mysqli_query($con,"insert into client(firstname, lastname, email, password_hash) values ('$firstname','$lastname','$email','$password_hash')") 
+mysqli_query($con,"insert into client(firstname, lastname, email, password_hash) values ('$firstname','$lastname','$email')") 
 			or die ("Query 1 is inncorrect........");
 header("location: Client.php"); 
 mysqli_close($con);
@@ -49,37 +48,7 @@ mysqli_close($con);
                           <input type="email" name="email" id="email" class="form-control" required>
                         </div>
                       </div>
-                      <div class="col-md-6">
-                        <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">Password</label>
-                          <input type="password" id="password_hash" name="password_hash" class="form-control" required>
-                        </div>
-                      </div>
                     </div>
-                    <!-- <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">phone number</label>
-                          <input type="text" id="phone" name="phone" class="form-control" required>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">City</label>
-                          <input type="text" name="city" id="city"  class="form-control" required>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">Address</label>
-                          <input type="text" name="country" id="country" class="form-control" required>
-                        </div>
-                      </div>
-                      
-                    </div> -->
-                    
                     <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Add Employee</button>
                     <div class="clearfix"></div>
                   </form>
@@ -100,18 +69,22 @@ mysqli_close($con);
                 <div class="table-responsive ps">
                   <table class="table tablesorter table-hover" id="">
                     <thead class=" text-primary">
-                      <tr><th>Email</th>
-                      <th>Password</th>
+                      
+                      <tr>
+                        <th>firstname</th>
+                        <th>Email</th>
+                      
 	<!-- <th><a href="adduser.php" class="btn btn-success">Add New</a></th> -->
                     </tr></thead>
                     <tbody>
                       <?php 
-                        $result=mysqli_query($con,"select id, email, password_hash from client")or die ("query 2 incorrect.......");
+                        $result=mysqli_query($con,"select id,firstname, email, password_hash from client")or die ("query 2 incorrect.......");
 
-                        while(list($user_id,$user_name,$user_password_hash)=
+                        while(list($user_id,$user_name,$user_email)=
                         mysqli_fetch_array($result))
                         {
-                        echo "<tr><td>$user_name</td><td>$user_password_hash</td>";
+                        echo "<tr><td>$user_name</td>";
+                        echo "<td>$user_email</td>";
 
                         echo"<td>
                         <a href='edituser.php?user_id=$user_id' type='button' rel='tooltip' title='' class='btn btn-info btn-link btn-sm' data-original-title='Edit User'>

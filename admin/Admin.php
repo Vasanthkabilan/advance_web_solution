@@ -38,7 +38,7 @@ include "sidenav.php";
                 </tr>
                <tr>
                <?php 
-                   $result=mysqli_query($con,"select * from clients")or die ("query 1 incorrect.....");
+                   $result=mysqli_query($con,"select * from client")or die ("query 1 incorrect.....");
 
                  while(list($name,$productname,$producttype,$instrument,$sector,$region,$country,$potentialinvestment,$tag)=mysqli_fetch_array($result))
                  {	
