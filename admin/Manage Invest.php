@@ -1,4 +1,5 @@
-<?php
+
+    <?php
 session_start();
 include("../db.php");
 if(isset($_GET['action']) && $_GET['action']!="" && $_GET['action']=='delete')
@@ -6,7 +7,7 @@ if(isset($_GET['action']) && $_GET['action']!="" && $_GET['action']=='delete')
 $user_id=$_GET['user_id'];
 
 /*this is delet quer*/
-mysqli_query($con,"delete from client where id='$user_id'")or die("query is incorrect...");
+mysqli_query($con,"delete from investment where id='$user_id'")or die("query is incorrect...");
 }
 
 include "sidenav.php";
@@ -56,7 +57,7 @@ include "sidenav.php";
           </div>
           
         </div>
-      </div>
-      <?php
+      </div> -->
+      <!-- <?php
 include "footer.php";
 ?> -->
