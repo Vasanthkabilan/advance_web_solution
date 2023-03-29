@@ -1,21 +1,20 @@
 <?php
 session_start();
 include "db.php";
-if(isset($_GET['action']) && $_GET['action']!="" && $_GET['action']=='delete')
-{
-$user_id=$_GET['user_id'];
+if (isset($_GET['action']) && $_GET['action'] != "" && $_GET['action'] == 'delete') {
+  $user_id = $_GET['user_id'];
 
-/*this is delet quer*/
-mysqli_query($con,"delete from client where id='$user_id'")or die("query is incorrect...");
-header("location: Client.php");
-mysqli_close($con);
+  /*this is delet quer*/
+  mysqli_query($con, "delete from client where id='$user_id'") or die("query is incorrect...");
+  header("location: Client.php");
+  mysqli_close($con);
 }
 
 include "sidenav.php";
 
 ?>
-      <!-- End Navbar -->
-      <!-- <div class="content">
+<!-- End Navbar -->
+<!-- <div class="content">
         <div class="container-fluid">
          <div class="col-md-14">
             <div class="card ">
@@ -31,15 +30,15 @@ include "sidenav.php";
 	<th><a href="adduser.php" class="btn btn-success">Add New</a></th>
                     </tr></thead>
                     <tbody>
-                      <?php 
-                        $result=mysqli_query($con,"select id, email, password_hash from client")or die ("query 2 incorrect.......");
+                      <?php
+                      $result = mysqli_query($con, "select id, email, password_hash from client") or die("query 2 incorrect.......");
 
-                        while(list($user_id,$user_name,$user_password_hash)=
-                        mysqli_fetch_array($result))
-                        {
+                      while (list($user_id, $user_name, $user_password_hash) =
+                        mysqli_fetch_array($result)
+                      ) {
                         echo "<tr><td>$user_name</td><td>$user_password_hash</td>";
 
-                        echo"<td>
+                        echo "<td>
                         <a href='edituser.php?user_id=$user_id' type='button' rel='tooltip' title='' class='btn btn-info btn-link btn-sm' data-original-title='Edit User'>
                                 <i class='material-icons'>edit</i>
                               <div class='ripple-container'></div></a>
@@ -47,9 +46,9 @@ include "sidenav.php";
                                 <i class='material-icons'>close</i>
                               <div class='ripple-container'></div></a>
                         </td></tr>";
-                        }
-                        mysqli_close($con);
-                        ?>
+                      }
+                      mysqli_close($con);
+                      ?>
                     </tbody>
                   </table>
                 <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
@@ -60,5 +59,5 @@ include "sidenav.php";
         </div>
       </div>
       <?php
-include "footer.php";
-?> -->
+      include "footer.php";
+      ?> -->
