@@ -1,11 +1,11 @@
 <?php
 session_start();
-include("../db.php");
-$user_id=$_REQUEST['user_id'];
+include "db.php";
+$id=$_REQUEST['id'];
 
-$result=mysqli_query($con,"select id, name, riskrating, producttype, instrument, sector, region, country, currency, content from investment where id='$user_id'")or die ("query 1 incorrect.......");
+$result=mysqli_query($con,"select id, name, riskrating, producttype, instrument, sector, region, country, currency, content from investments where id='$id'")or die ("query 1 incorrect.......");
 
-list($user_id, $name, $riskrating, $producttype, $instrument, $sector, $region, $country,  $currency, $content)=mysqli_fetch_array($result);
+list($id, $name, $riskrating, $producttype, $instrument, $sector, $region, $country,  $currency, $content)=mysqli_fetch_array($result);
 
 if(isset($_POST['btn_save'])) 
 {
@@ -19,9 +19,9 @@ if(isset($_POST['btn_save']))
     $currency=$_POST['currency'];
     $content=$_POST['content'];
 
-mysqli_query($con,"update `investment` set name='$name', riskrating='$riskrating', producttype='$producttype', instrument='$instrument', sector='$sector', region='$region', country='$country',  currency='$currency', content='$content' where id='$user_id'")or die("Query 2 is inncorrect..........");
+mysqli_query($con,"update `investments` set name='$name', riskrating='$riskrating', producttype='$producttype', instrument='$instrument', sector='$sector', region='$region', country='$country',  currency='$currency', content='$content' where id='$id'")or die("Query 2 is inncorrect..........");
 
-header("location: invest.php");
+header("location: investments.php");
 mysqli_close($con);
 }
 //include "sidenav.php";
@@ -31,7 +31,7 @@ mysqli_close($con);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Update Record</title>
+    <title>Update Investment</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         .wrapper{
@@ -46,9 +46,9 @@ mysqli_close($con);
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12 ">
-             <h2 class="mt-5">Update Record</h2>
+             <h2 class="mt-5">Update Investment</h2>
               <form action="editinvest.php" name="form" method="post" enctype="multipart/form-data">
-               <input type="hidden" name="user_id" id="user_id" value="<?php echo $user_id;?>" />
+               <input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
                       <div class="form-group">
                         <label>Investment Name</label>
                         <input type="text" id="name" name="name"  class="form-control" value="<?php echo $name; ?>" >

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../db.php");
+include "db.php";
 $user_id=$_REQUEST['user_id'];
 
 $result=mysqli_query($con,"select id,firstname,lastname, email from client where id='$user_id'")or die ("query 1 incorrect.......");
@@ -16,7 +16,7 @@ $email=$_POST['email'];
 
 mysqli_query($con,"update client set firstname='$firstname', lastname='$lastname', email='$email' where id='$user_id'")or die("Query 2 is inncorrect..........");
 
-header("location: Admin.php");
+header("location: Client.php");
 mysqli_close($con);
 }
 //include "sidenav.php";

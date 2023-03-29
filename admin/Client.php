@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../db.php");
+include "db.php";
 include "sidenav.php";
 if(isset($_POST['btn_save']))
 {
@@ -23,7 +23,7 @@ mysqli_close($con);
           <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Add Client</h4>
+                  <h4 class="card-title">Add Employee</h4>
                 </div>
                 <div class="card-body">
                   <form action="" method="post" name="form" enctype="multipart/form-data">
@@ -52,7 +52,7 @@ mysqli_close($con);
                       <div class="col-md-6">
                         <div class="form-group bmd-form-group">
                           <label class="bmd-label-floating">Password</label>
-                          <input type="password" id="password" name="password_hash" class="form-control" required>
+                          <input type="password" id="password_hash" name="password_hash" class="form-control" required>
                         </div>
                       </div>
                     </div>
@@ -80,7 +80,7 @@ mysqli_close($con);
                       
                     </div> -->
                     
-                    <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Add</button>
+                    <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Add Employee</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -94,14 +94,14 @@ mysqli_close($con);
          <div class="col-md-14">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title">Manage Client</h4>
+                <h4 class="card-title">Manage Employees</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table tablesorter table-hover" id="">
                     <thead class=" text-primary">
                       <tr><th>Email</th>
-              
+                      <th>Password</th>
 	<!-- <th><a href="adduser.php" class="btn btn-success">Add New</a></th> -->
                     </tr></thead>
                     <tbody>
@@ -111,7 +111,7 @@ mysqli_close($con);
                         while(list($user_id,$user_name,$user_password_hash)=
                         mysqli_fetch_array($result))
                         {
-                        echo "<tr><td>$user_name</td>";
+                        echo "<tr><td>$user_name</td><td>$user_password_hash</td>";
 
                         echo"<td>
                         <a href='edituser.php?user_id=$user_id' type='button' rel='tooltip' title='' class='btn btn-info btn-link btn-sm' data-original-title='Edit User'>

@@ -45,9 +45,9 @@
                 </a>
                 <a href="./Client.php">
                     <span class="material-symbols-sharp">group</span>
-                    <h4>Clients</h4>
+                    <h4>Employees</h4>
                 </a>
-                <a href="./invest.php">
+                <a href="./investments.php">
                     <span class="material-symbols-sharp">monitoring</span>
                     <h4>Investments</h4>
                 </a>
