@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../db.php");
+include("db.php");
 $user_id=$_REQUEST['user_id'];
 
 $result=mysqli_query($con,"select id, name, riskrating, producttype, instrument, sector, region, country, currency, content from investment where id='$user_id'")or die ("query 1 incorrect.......");

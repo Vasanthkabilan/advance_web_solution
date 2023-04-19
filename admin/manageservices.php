@@ -7,8 +7,8 @@ $user_id=$_GET['user_id'];
 
 /*this is delet quer*/
 mysqli_query($con,"delete from services where id='$user_id'")or die("query is incorrect...");
+header("location: services.php");
+mysqli_close($con);
 }
-
 include "sidenav.php";
-
 ?>

@@ -1,15 +1,14 @@
 <?php
 session_start();
-include "db.php";
+include("db.php");
 if(isset($_GET['action']) && $_GET['action']!="" && $_GET['action']=='delete')
 {
-$id=$_GET['id'];
+$user_id=$_GET['user_id'];
 
 /*this is delet quer*/
-mysqli_query($con,"delete from investments where id='$id'")or die("query is incorrect...");
-header("location: investments.php");
+mysqli_query($con,"delete from investment where id='$user_id'")or die("query is incorrect...");
+header("location: invest.php");
+mysqli_close($con);
 }
-
 include "sidenav.php";
-
 ?>
