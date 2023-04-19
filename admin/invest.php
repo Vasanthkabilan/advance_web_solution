@@ -48,7 +48,7 @@ mysqli_close($con);
 
                 <h2 class="mt-5">Manage Investment</h2>
 <table class="table table-bordered">
-  <thead>
+  <thead class= "thead-light">
     <tr>
       <th scope="col">Investment Name</th>
       <th scope="col">Risk Rating</th>

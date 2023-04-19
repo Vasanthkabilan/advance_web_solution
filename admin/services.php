@@ -30,7 +30,7 @@ include "sidenav.php";
 
                 <h2 class="mt-5">Manage Services</h2>
 <table class="table table-bordered">
-  <thead>
+  <thead class= "thead-light">
     <tr>
       <th scope="col">Service Name</th>
       <th scope="col">Product Type</th>

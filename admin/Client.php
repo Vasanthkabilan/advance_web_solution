@@ -30,7 +30,7 @@ include "sidenav.php";
 
                 <h2 class="mt-5">Manage Employees</h2>
 <table class="table table-bordered">
-  <thead>
+  <thead class= "thead-light">
     <tr>
       <th scope="col">ID</th>
       <th scope="col">First Name</th>

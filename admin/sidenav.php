@@ -24,7 +24,7 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
   <nav>
         <div class="container">
-            <img src="./assets/img/logo 1.png" class="logo">
+            <img src="../images/profile.jpg" class="logo">
          <div class="profile-area">
             <div class="profile">
                 <!-- <div class="profile-photo">
@@ -59,18 +59,14 @@ if (!isset($_SESSION['loggedin'])) {
                     <span class="material-symbols-sharp">real_estate_agent</span>
                     <h4>Services</h4>
                 </a>
-                <a href=".#">
-                    <span class="material-symbols-sharp">support_agent</span>
-                    <h4>RM</h4>
+                <a href="./approve.php">
+                    <span class="material-symbols-sharp">checklist</span>
+                    <h4>Approved Ideas</h4>
                 </a>
                 <a href="./login.php">
                     <span class="material-symbols-sharp">logout</span>
                     <h4>Logout</h4>
                 </a>
-                <!-- <a href="./Settings.html">
-                    <span class="material-symbols-sharp">settings</span>
-                    <h4>Settings</h4>
-                </a>  -->
             </div>
 
         </aside>

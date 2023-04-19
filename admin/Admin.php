@@ -27,7 +27,7 @@ include "sidenav.php";
               <form action="" method="post" name="form" enctype="multipart/form-data">
                 <h2 class="mt-5">Clients List</h2>
  <table class="table table-bordered">
-  <thead>
+  <thead class= "thead-light">
     <tr>
       <th scope="col">ID</th>
       <th scope="col">First Name</th>
