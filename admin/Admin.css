@@ -36,11 +36,10 @@
 }
 
 html {
-    font-size: 12px;
+    font-size: 14px;
 }
   
 body {
-    background: var(--color-light);
     font-family: poppins, sans-serif;
     min-height: 100vh;
     color: var(--color-dark);
