@@ -9,7 +9,6 @@ include "sidenav.php";
     <meta charset="UTF-8">
     <title>Employees</title>
     <link rel="stylesheet" href="./styless.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <style>
         .wrapper{
             width: 800px;
@@ -36,6 +35,7 @@ include "sidenav.php";
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
