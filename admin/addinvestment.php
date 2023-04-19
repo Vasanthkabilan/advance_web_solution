@@ -25,7 +25,7 @@ mysqli_close($con);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Update Record</title>
+    <title>Update Investment</title>
     <link rel="stylesheet" href="./styless.css">
     <style>
         .wrapper{

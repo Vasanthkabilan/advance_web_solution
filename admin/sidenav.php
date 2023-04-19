@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: loggin.php');
+	exit;
+}
+?>
+
 <!DOCTYPE html> 
 <htmI lang="en">
 <head> 
@@ -16,27 +24,17 @@
 <body>
   <nav>
         <div class="container">
-            <img src="./images/logo.png" class="logo">
+            <img src="../images/profile.jpg" class="logo">
          <div class="profile-area">
             <div class="profile">
-                <!-- <div class="profile-photo">
-                    <img src="./images/profile.jpg">
-                </div> -->
-                <h5>Vasanth</h5>
-                <span class="material-symbols-sharp">expand_more</span>
+                <h4>Welcome! <?php echo($_SESSION['email']); ?></h4>
             </div>
-            <button id="menu-btn">
-                <span class="material-symbols-sharp">menu</span>
-            </button>
         </div>
       </div>
     </nav>
 
     <main>
         <aside>
-            <button id="close-btn">
-                <span class="material-symbols-sharp">close</span>
-            </button>
 
             <div class="sidebar">
                 <a href="./Admin.php">
@@ -47,7 +45,7 @@
                     <span class="material-symbols-sharp">group</span>
                     <h4>Employees</h4>
                 </a>
-                <a href="./investments.php">
+                <a href="./invest.php">
                     <span class="material-symbols-sharp">monitoring</span>
                     <h4>Investments</h4>
                 </a>
@@ -55,18 +53,14 @@
                     <span class="material-symbols-sharp">real_estate_agent</span>
                     <h4>Services</h4>
                 </a>
-                <a href=".#">
-                    <span class="material-symbols-sharp">support_agent</span>
-                    <h4>RM</h4>
+                <a href="./approve.php">
+                    <span class="material-symbols-sharp">checklist</span>
+                    <h4>Approved Ideas</h4>
                 </a>
-                <a href=".#">
-                    <span class="material-symbols-sharp">tips_and_updates</span>
-                    <h4>Idea Creator</h4>
+                <a href="./login.php">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h4>Logout</h4>
                 </a>
-                <!-- <a href="./Settings.html">
-                    <span class="material-symbols-sharp">settings</span>
-                    <h4>Settings</h4>
-                </a>  -->
             </div>
 
         </aside>
